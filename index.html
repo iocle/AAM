@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academy for Aspiring Mathematicians</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Include Navigation -->
+  <div id="navContainer"></div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Unlock Your Mathematical Potential</h1>
+    <p>Join the Academy for Aspiring Mathematicians and take your skills to the next level.</p>
+    <div class="hero-buttons">
+      <a href="signup_student.html" class="btn-primary">Join as Student</a>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits">
+    <h2>Why Join AAM?</h2>
+    <ul>
+      <li>Expert Tutors from Top Institutions</li>
+      <li>Interactive and Fun Learning Experience</li>
+      <li>Custom Tailored Lesson Plans</li>
+    </ul>
+  </section>
+
+  <!-- Testimonials Preview -->
+  <section class="testimonials">
+    <h2>What Our Students Say</h2>
+    <p>"AAM made math fun again!" – Alex P.</p>
+    <p>"I improved my scores in just 2 months!" – Priya K.</p>
+    <a href="reviews.html">Read More Reviews</a>
+  </section>
+
+<script>
+// Load nav.html into navContainer
+fetch('nav.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('navContainer').innerHTML = html;
+  });
+</script>
+
+</body>
+</html>

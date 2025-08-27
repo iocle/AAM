@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About AAM | Academy for Aspiring Mathematicians</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Include Navigation -->
+  <div id="navContainer"></div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>About the Academy</h1>
+        <p>Empowering students and tutors to excel in the art and science of mathematics.</p>
+    </section>
+
+    <!-- About Content -->
+    <section>
+        <h2>Our Mission</h2>
+        <p>
+            The Academy for Aspiring Mathematicians (AAM) was founded with a single goal:
+            to provide world-class math education accessible to students from all backgrounds.
+            We believe that mathematical thinking is a superpower — one that opens doors to
+            academic success, career opportunities, and problem-solving in everyday life.
+        </p>
+    </section>
+
+    <section>
+        <h2>Our Approach</h2>
+        <p>
+            We connect passionate tutors with curious learners, offering personalized lessons,
+            interactive problem-solving sessions, and competitive math training.
+            Our platform bridges the gap between theory and application, ensuring that
+            students not only learn formulas but also master the art of logical reasoning.
+        </p>
+    </section>
+
+    <section>
+        <h2>Why Choose AAM?</h2>
+        <div class="card">
+            <h3>Expert Tutors</h3>
+            <p>All our tutors are vetted for expertise and teaching ability.</p>
+        </div>
+        <div class="card">
+            <h3>Flexible Learning</h3>
+            <p>Learn at your own pace with live or recorded sessions.</p>
+        </div>
+        <div class="card">
+            <h3>Community Support</h3>
+            <p>Join a vibrant community of students passionate about mathematics.</p>
+        </div>
+    </section>
+<script>
+// Load nav.html into navContainer
+fetch('nav.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('navContainer').innerHTML = html;
+  });
+</script>
+
+</body>
+</html>
