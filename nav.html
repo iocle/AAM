@@ -70,28 +70,3 @@ header {
   opacity: 0.8;
 }
 </style>
-
-<script type="module">
-import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-import { app } from './firebase-config.js'; // Your Firebase config file
-
-const auth = getAuth(app);
-const authLinks = document.getElementById('authLinks');
-
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    authLinks.innerHTML = `
-      <a href="dashboard_student.html" class="btn-login">Dashboard</a>
-      <button id="logoutBtn" class="btn-signup">Logout</button>
-    `;
-    document.getElementById('logoutBtn').addEventListener('click', () => {
-      signOut(auth);
-    });
-  } else {
-    authLinks.innerHTML = `
-      <a href="login.html" class="btn-login">Login</a>
-      <a href="signup_student.html" class="btn-signup">Sign Up</a>
-    `;
-  }
-});
-</script>
