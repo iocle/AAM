@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses | Academy for Aspiring Mathematicians</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <div id="navContainer"></div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Our Courses</h1>
+    <p>Explore our range of mathematics programs designed for students of all levels.</p>
+  </section>
+
+  <!-- Courses List -->
+  <section class="courses-grid">
+    <div class="course-card">
+      <h2>Elementary School Mathematics</h2>
+      <p>Perfect for young learners building a strong foundation in math concepts.</p>
+      <button>Learn More</button>
+    </div>
+    <div class="course-card">
+      <h2>Middle School Mathematics</h2>
+      <p>For students looking to strengthen problem-solving skills and apply concepts.</p>
+      <button>Learn More</button>
+    </div>
+    <div class="course-card">
+      <h2>Competition Math Training</h2>
+      <p>Prepare for math olympiads, AMC, and other competitive math exams.</p>
+      <button>Learn More</button>
+    </div>
+  </section>
+  <script>
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navContainer').innerHTML = html;
+      });
+  </script>
+
+</body>
+</html>
